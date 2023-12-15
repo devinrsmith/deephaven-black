@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+
+    <title>deephaven-black plugin</title>
+</head>
+<body>
+
+    TODO
+
+<script type="module">
+    // If a PSK is specified in the URL, ensure that the auth link retains it
+    var urlPsk = new URL(window.location).searchParams.get('psk');
+    if (urlPsk) {
+        document.getElementById('auth').href += "?psk=" + urlPsk;
+    }
+
+    // Import the JS API and attach it to the window object for easier experimentation
+    import dh from './dh-core.js'
+    window.dh = dh;
+</script>
+</body>
+</html>
